@@ -2,7 +2,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Navigation from "./components/Navigation";
 import Sidebar from "./components/Sidebar";
-import Layout from "./hoc/Layout";
+
 import "./stylesheets/css/main.css";
 
 function App() {
