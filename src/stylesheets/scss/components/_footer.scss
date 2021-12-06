@@ -1,1 +1,47 @@
-// footer
+@use "../helpers/" as *;
+
+.footer {
+	%gap {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+	background-color: black;
+	padding: 4.5rem;
+	&-container {
+		max-width: 111rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		@extend %gap;
+		.brand {
+			width: 14.4rem;
+		}
+		ul {
+			list-style: none;
+			display: flex;
+			gap: 3.2rem;
+			a {
+				font-size: 1.5rem;
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	&__right {
+		@extend %gap;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 1.6rem;
+		}
+		.copyright {
+			color: $very-dark-gray;
+			font-size: 1.5rem;
+		}
+	}
+}
