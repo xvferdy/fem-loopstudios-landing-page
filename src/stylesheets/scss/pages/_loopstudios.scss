@@ -1,22 +1,27 @@
 @use "../helpers/" as *;
 
 .loopstudios {
+	display: grid;
+	gap: 15.8rem;
+	%section-wrapper {
+		max-width: 111rem;
+		margin: 0 auto;
+	}
 	.hero {
+		padding: 6.5rem 4rem;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 			url("../../assets/images/desktop/image-hero.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
 		height: 65rem;
-		padding: 6.5rem 4rem;
+		&-wrapper {
+			@extend %section-wrapper;
+		}
 		&__title {
-			// background-color: yellow;
 			color: white;
 			display: flex;
-			max-width: 111rem;
-			margin: 0 auto;
 			padding-top: 12.6rem;
-
 			h1 {
 				font-family: $secondary-font;
 				font-size: 7.2rem;
@@ -25,10 +30,76 @@
 				border: 2px solid white;
 				max-width: 65rem;
 				padding: 4rem;
-				padding-bottom: 3rem;
-
-				line-height: 7.2rem;
+				padding-bottom: 2.8rem;
+				line-height: 7rem;
 			}
+		}
+	}
+	.intro {
+		&-wrapper {
+			@extend %section-wrapper;
+			display: flex;
+			position: relative;
+		}
+		&__text {
+			padding-top: 9.6rem;
+			padding-left: 9.6rem;
+			position: absolute;
+			background-color: $white;
+			right: 0;
+			bottom: -5px;
+			width: 54.5rem;
+
+			&-title {
+				font-size: 4.8rem;
+				font-family: $secondary-font;
+				font-weight: 300;
+				text-transform: uppercase;
+				line-height: 4.8rem;
+				margin-bottom: 2.5rem;
+			}
+			&-desc {
+				color: $dark-gray;
+				line-height: 2.5rem;
+			}
+		}
+	}
+	.creations {
+		margin: 2.5rem 0;
+		&-wrapper {
+			@extend %section-wrapper;
+		}
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 7.5rem;
+
+			&-title {
+				font-family: $secondary-font;
+				font-size: 4.8rem;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			&-btn {
+				border: 1px solid black;
+				font-size: 1.4rem;
+				padding: 1rem 3.8rem;
+				background-color: $white;
+				text-transform: uppercase;
+				letter-spacing: 0.5rem;
+				cursor: pointer;
+				&:hover {
+					background: black;
+					color: white;
+				}
+			}
+		}
+		&__cards {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			gap: 2.7rem;
 		}
 	}
 }

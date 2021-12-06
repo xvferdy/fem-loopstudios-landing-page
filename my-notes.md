@@ -1,3 +1,5 @@
 - [ ] web favicon & title
 - [ ] sass url path
 - [ ] delete
+- [ ] line height
+- [ ] font size p
