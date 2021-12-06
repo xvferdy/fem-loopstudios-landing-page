@@ -3,3 +3,4 @@
 - [ ] delete
 - [ ] line height
 - [ ] font size p
+- [x] masuk responsive
