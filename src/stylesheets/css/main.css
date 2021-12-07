@@ -16,8 +16,67 @@ html {
   font-size: 62.5%;
 }
 
+h1 {
+  font-size: 7.2rem;
+  line-height: 7rem;
+  font-weight: 300;
+  border: 2px solid white;
+  max-width: 65rem;
+  padding: 4rem;
+  padding-bottom: 2.8rem;
+}
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 6.4rem;
+    line-height: 6.2rem;
+    max-width: 56rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    padding: 2rem;
+    max-width: 40rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3rem;
+    padding: 1rem;
+    max-width: 30rem;
+  }
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 300;
+  line-height: 4.8rem;
+}
+@media only screen and (max-width: 1024px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+}
+
 p {
   font-size: 1.5rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .navbar-container {
@@ -25,8 +84,8 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-.navbar__brand img:hover {
-  transform: scale(1.3);
+.navbar__brand {
+  z-index: 40;
 }
 .navbar__list {
   display: flex;
@@ -36,8 +95,6 @@ p {
 }
 .navbar__list-item a {
   font-size: 1.5rem;
-  color: #fff;
-  text-decoration: none;
 }
 @media only screen and (max-width: 700px) {
   .navbar__list {
@@ -52,14 +109,29 @@ p {
     display: grid;
     place-items: center;
     cursor: pointer;
+    z-index: 40;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navbar {
+    position: fixed;
+    z-index: 60;
+    width: 85%;
+  }
+  .navbar__brand img {
+    max-width: 14.4rem;
   }
 }
 
 .card {
   position: relative;
+  overflow: hidden;
 }
 .card img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
 }
 .card p {
   font-family: "Josefin Sans", sans-serif;
@@ -67,11 +139,46 @@ p {
   color: white;
   bottom: 0;
   font-size: 3.2rem;
+  line-height: 3.2rem;
   font-weight: 300;
   text-transform: uppercase;
-  width: 70%;
   padding: 3rem 4rem;
-  line-height: 3.2rem;
+  max-width: 245 px;
+  transition: 0.2s linear;
+  z-index: 10;
+}
+@media only screen and (max-width: 700px) {
+  .card p {
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+  }
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+  opacity: 0.6;
+  transition: 0.5s;
+  z-index: 5;
+}
+.card:hover img {
+  transform: rotate(-3deg) scale(1.1);
+}
+@media only screen and (max-width: 1024px) {
+  .card:hover img {
+    transform: rotate(0deg) scale(1.1);
+  }
+}
+.card:hover::before {
+  opacity: 1;
+}
+.card:hover p {
+  transform: translateY(-5px);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
 
 .backdrop {
@@ -80,13 +187,14 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 20;
   background-color: royalblue;
   opacity: 0.4;
 }
 
 .sidebar {
   display: none;
+  position: relative;
 }
 @media only screen and (max-width: 700px) {
   .sidebar {
@@ -94,17 +202,30 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 45%;
+    width: 100%;
     height: 100%;
-    background-color: brown;
-    z-index: 6;
-    transition: transform 0.3s ease-out;
+    z-index: 30;
+    padding: 4rem 2rem;
+    background-color: black;
+  }
+  .sidebar__list {
+    list-style: none;
+    position: absolute;
+    bottom: 50%;
+  }
+  .sidebar__list__item a {
+    display: block;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 1rem 0;
   }
   .sidebar--open {
-    transform: translateX(0);
+    transform: translatey(0);
   }
   .sidebar--closed {
-    transform: translateX(-100%);
+    transform: translatey(-100%);
   }
 }
 
@@ -123,8 +244,13 @@ p {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
 .footer__left .brand {
-  width: 14.4rem;
+  max-width: 14.4rem;
 }
 .footer__left ul {
   list-style: none;
@@ -135,6 +261,16 @@ p {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
+}
+@media only screen and (max-width: 900px) {
+  .footer__left .brand {
+    margin: 0 auto;
+  }
+  .footer__left ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+  }
 }
 .footer__right ul {
   list-style: none;
@@ -147,7 +283,24 @@ p {
   color: dimgray;
   font-size: 1.5rem;
 }
+@media only screen and (max-width: 900px) {
+  .footer__right {
+    margin-top: 4rem;
+  }
+  .footer__right ul {
+    margin: 10px;
+    justify-content: center;
+  }
+  .footer__right .copyright {
+    margin: 0 auto;
+  }
+}
 
+/* SASS DIRECTORY
+	1. =.hero
+	2. =.intro
+	3. =.creations
+*/
 .loopstudios {
   display: grid;
   gap: 15.8rem;
@@ -157,12 +310,12 @@ p {
   margin: 0 auto;
 }
 .loopstudios .hero {
-  padding: 6.5rem 4rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   height: 65rem;
+  padding: 6.5rem 4rem;
 }
 .loopstudios .hero__title {
   color: white;
@@ -171,18 +324,31 @@ p {
 }
 .loopstudios .hero__title h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 7.2rem;
-  font-weight: 300;
   text-transform: uppercase;
-  border: 2px solid white;
-  max-width: 65rem;
-  padding: 4rem;
-  padding-bottom: 2.8rem;
-  line-height: 7rem;
+}
+@media only screen and (max-width: 700px) {
+  .loopstudios .hero {
+    background-image: url("../../assets/images/mobile/image-hero.jpg");
+    padding: 6.5rem 2rem;
+  }
+}
+.loopstudios .intro {
+  padding: 0 2rem;
 }
 .loopstudios .intro-wrapper {
   display: flex;
   position: relative;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .loopstudios .intro-wrapper {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+}
+.loopstudios .intro img {
+  width: 100%;
 }
 .loopstudios .intro__text {
   padding-top: 9.6rem;
@@ -191,33 +357,37 @@ p {
   background-color: white;
   right: 0;
   bottom: -5px;
-  width: 54.5rem;
+  max-width: 54.5rem;
 }
 .loopstudios .intro__text-title {
-  font-size: 4.8rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
   text-transform: uppercase;
-  line-height: 4.8rem;
   margin-bottom: 2.5rem;
 }
 .loopstudios .intro__text-desc {
   color: #8c8c8c;
   line-height: 2.5rem;
 }
+@media only screen and (max-width: 1024px) {
+  .loopstudios .intro__text {
+    width: auto;
+    position: relative;
+    padding-top: 9.6rem;
+    padding-left: 0;
+    max-width: 731px;
+  }
+}
 .loopstudios .creations {
+  padding: 0 2rem;
   margin: 2.5rem 0;
 }
 .loopstudios .creations__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   margin-bottom: 7.5rem;
 }
 .loopstudios .creations__header-title {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 4.8rem;
-  font-weight: 300;
   text-transform: uppercase;
 }
 .loopstudios .creations__header-btn {
@@ -229,15 +399,38 @@ p {
   letter-spacing: 0.5rem;
   cursor: pointer;
 }
+.loopstudios .creations__header-btn--mobile {
+  display: none;
+}
 .loopstudios .creations__header-btn:hover {
   background: black;
   color: white;
 }
+@media only screen and (max-width: 700px) {
+  .loopstudios .creations__header-btn {
+    display: none;
+  }
+  .loopstudios .creations__header-btn--mobile {
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto 0 auto;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .loopstudios .creations__header {
+    justify-content: center;
+  }
+}
 .loopstudios .creations__cards {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2.7rem;
+}
+@media only screen and (max-width: 900px) {
+  .loopstudios {
+    gap: 10.3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

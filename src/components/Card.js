@@ -1,11 +1,14 @@
 import React from "react";
-import myImg from "../assets/images/desktop/image-deep-earth.jpg";
 
-function Card() {
+function Card({ title, desktopImg, mobileImg }) {
 	return (
 		<div className="card">
-			<img src={myImg} alt="" />
-			<p>Deep Earth</p>
+			<picture>
+				<source media="(max-width: 999px)" srcset={mobileImg} />
+				<img src={desktopImg} alt="" />
+			</picture>
+
+			<p>{title}</p>
 		</div>
 	);
 }

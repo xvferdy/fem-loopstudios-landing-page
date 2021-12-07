@@ -14,4 +14,9 @@
 			@content;
 		}
 	}
+	@if ($breakpoint == tab-land) {
+		@media only screen and(max-width: 1024px) {
+			@content;
+		}
+	}
 }

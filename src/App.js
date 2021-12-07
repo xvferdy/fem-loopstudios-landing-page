@@ -3,9 +3,11 @@ import Navbar from "./components/Navbar";
 import Navigation from "./components/Navigation";
 import Sidebar from "./components/Sidebar";
 import introImg from "./assets/images/desktop/image-interactive.jpg";
+import introMobileImg from "./assets/images/mobile/image-interactive.jpg";
 
 import "./stylesheets/css/main.css";
 import Card from "./components/Card";
+import data from "./data";
 
 function App() {
 	return (
@@ -22,7 +24,10 @@ function App() {
 			{/* INTRO */}
 			<div className="intro">
 				<div className="intro-wrapper">
-					<img src={introImg} alt="" />
+					<picture>
+						<source media="(max-width: 700px)" srcset={introMobileImg} />
+						<img src={introImg} alt="" />
+					</picture>
 					<div className="intro__text">
 						<h2 className="intro__text-title">The Leader In Interactive VR</h2>
 						<p className="intro__text-desc">
@@ -43,15 +48,13 @@ function App() {
 						<button className="creations__header-btn">See All</button>
 					</div>
 					<div className="creations__cards">
-						<Card />
-						<Card />
-						<Card />
-						<Card />
-						<Card />
-						<Card />
-						<Card />
-						<Card />
+						{data.map((card) => (
+							<Card {...card} />
+						))}
 					</div>
+					<button className="creations__header-btn creations__header-btn--mobile">
+						See All
+					</button>
 				</div>
 			</div>
 

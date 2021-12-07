@@ -1,6 +1,6 @@
 - [ ] web favicon & title
 - [ ] sass url path
-- [ ] delete
+- [ ] delete files, component, 
 - [ ] line height
 - [ ] font size p
 - [x] masuk responsive
