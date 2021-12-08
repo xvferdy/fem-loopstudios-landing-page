@@ -1,15 +1,19 @@
 @use "../helpers/" as *;
 
 .navbar {
+	background-color: inherit;
+
+	z-index: 40;
 	&-container {
 		display: flex;
-		// max-width: 111rem;
-		// margin: 0 auto;
+		max-width: 111rem;
+		margin: 0 auto;
+		// padding: 0 2.4rem;
+		padding-top: 6.5rem;
 		justify-content: space-between;
 		align-items: center;
 	}
 	&__brand {
-		z-index: 40;
 	}
 	&__list {
 		display: flex;
@@ -24,27 +28,38 @@
 		}
 
 		@include display(phone) {
-			display: none;
+			// display: none;
 		}
 	}
 	&__button {
 		display: none;
-		@include display(phone) {
-			display: grid;
-			place-items: center;
-			cursor: pointer;
-			z-index: 40;
-		}
+		// @include display(phone) {
+		// 	display: grid;
+		// 	place-items: center;
+		// 	cursor: pointer;
+		// }
 	}
 	@include display(phone) {
 		position: fixed;
-		z-index: 60;
-
-		width: 85%;
+		width: 100%;
+		top: 0;
+		&-container {
+			padding: calc(6.5rem / 2) 2.4rem;
+			// padding-top: 6.5rem;
+			background-color: black;
+		}
 		&__brand {
 			img {
 				max-width: 14.4rem;
 			}
+		}
+		&__list {
+			display: none;
+		}
+		&__button {
+			display: grid;
+			place-items: center;
+			cursor: pointer;
 		}
 	}
 }

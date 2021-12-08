@@ -34,12 +34,15 @@ h2 {
 	font-size: 4.8rem;
 	font-weight: 300;
 	line-height: 4.8rem;
+	margin-bottom: 2.5rem;
 
 	@include display(tab-land) {
 		font-size: 4rem;
+		margin-bottom: 1.5rem;
 	}
 	@include display(phone) {
 		font-size: 3.2rem;
+		line-height: 3.2rem;
 		text-align: center;
 	}
 }

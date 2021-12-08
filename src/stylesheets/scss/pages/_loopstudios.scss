@@ -7,11 +7,14 @@
 */
 
 .loopstudios {
-	display: grid;
-	gap: 15.8rem;
 	%section-wrapper {
 		max-width: 111rem;
 		margin: 0 auto;
+	}
+	&-grid {
+		display: grid;
+		gap: 15.8rem;
+		padding-bottom: 15.8rem;
 	}
 
 	.hero {
@@ -20,10 +23,17 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
+		// height: 65rem;
+
+		background-attachment: fixed;
 		height: 65rem;
-		padding: 6.5rem 4rem;
+
+		padding: 0 2.4rem;
 		&-wrapper {
 			@extend %section-wrapper;
+			@include display(phone) {
+				padding: 0 2rem;
+			}
 		}
 		&__title {
 			color: white;
@@ -36,14 +46,17 @@
 		}
 		@include display(phone) {
 			background-image: url("../../assets/images/mobile/image-hero.jpg");
-			padding: 6.5rem 2rem;
-			// background-repeat: no-repeat;
-			// background-size: cover;
-			// height: 65rem;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 65rem;
+			padding: 0;
+			&__title {
+				padding-top: 23.6rem;
+			}
 		}
 	}
 	.intro {
-		padding: 0 2rem; // FIXME: 1px image container padding
+		padding: 0 2.4rem; // FIXME: 1px image container padding
 		&-wrapper {
 			@extend %section-wrapper;
 			display: flex;
@@ -69,7 +82,6 @@
 			max-width: 54.5rem;
 			&-title {
 				text-transform: uppercase;
-				margin-bottom: 2.5rem;
 			}
 			&-desc {
 				color: $dark-gray;
@@ -78,14 +90,14 @@
 			@include display(tab-land) {
 				width: auto;
 				position: relative;
-				padding-top: 9.6rem;
+				padding-top: 4.6rem;
 				padding-left: 0;
 				max-width: 731px;
 			}
 		}
 	}
 	.creations {
-		padding: 0 2rem;
+		padding: 0 2.4rem;
 		margin: 2.5rem 0;
 		&-wrapper {
 			@extend %section-wrapper;
@@ -123,6 +135,9 @@
 					}
 				}
 			}
+			@include display(tab-port) {
+				margin-bottom: 3.5rem;
+			}
 			@include display(phone) {
 				justify-content: center;
 			}
@@ -135,6 +150,9 @@
 		}
 	}
 	@include display(tab-port) {
-		gap: 10.3rem;
+		&-grid {
+			gap: 9.6rem;
+			padding-bottom: calc(15.8rem / 2);
+		}
 	}
 }

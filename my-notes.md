@@ -4,3 +4,7 @@
 - [ ] line height
 - [ ] font size p
 - [x] masuk responsive
+- [ ] animation invert
+- [ ] intro img ganti versi desktop kalau masih tab (+ rubah max width text dibawahnya)
+- [ ] creations 2 columns
+- [ ] cek2 lagi

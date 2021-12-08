@@ -28,12 +28,10 @@
 			gap: 3.2rem;
 			a {
 				font-size: 1.5rem;
-				color: $white;
-				text-decoration: none;
 			}
 		}
 		@include display(tab-port) {
-			.brand {
+			a {
 				margin: 0 auto;
 			}
 			ul {
@@ -51,6 +49,13 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			gap: 1.6rem;
+			a {
+				img {
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
 		}
 		.copyright {
 			color: $very-dark-gray;
@@ -63,6 +68,7 @@
 			}
 			.copyright {
 				margin: 0 auto;
+				text-align: center;
 			}
 			margin-top: 4rem;
 		}

@@ -10,45 +10,48 @@ function Footer() {
 		<footer className="footer">
 			<div className="footer-container">
 				<div className="footer__left">
-					<img className="brand" src={brand} alt="" />
+					<a href="#top">
+						<img className="brand" src={brand} alt="" />
+					</a>
+
 					<ul>
 						<li>
-							<a href="">About</a>
+							<a href="#">About</a>
 						</li>
 						<li>
-							<a href="">Careers</a>
+							<a href="#">Careers</a>
 						</li>
 						<li>
-							<a href="">Events</a>
+							<a href="#">Events</a>
 						</li>
 						<li>
-							<a href="">Products</a>
+							<a href="#">Products</a>
 						</li>
 						<li>
-							<a href="">Support</a>
+							<a href="#">Support</a>
 						</li>
 					</ul>
 				</div>
 				<div className="footer__right">
 					<ul>
 						<li>
-							<a href="">
-								<img src={instagram} alt="" />
+							<a href="#">
+								<img src={instagram} alt="Instgram" />
 							</a>
 						</li>
 						<li>
-							<a href="">
-								<img src={pinterest} alt="" />
+							<a href="#">
+								<img src={pinterest} alt="Pinterest" />
 							</a>
 						</li>
 						<li>
-							<a href="">
-								<img src={twitter} alt="" />
+							<a href="#">
+								<img src={twitter} alt="Twitter" />
 							</a>
 						</li>
 						<li>
-							<a href="">
-								<img src={facebook} alt="" />
+							<a href="#">
+								<img src={facebook} alt="Facebook" />
 							</a>
 						</li>
 					</ul>

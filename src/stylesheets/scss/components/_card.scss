@@ -19,11 +19,12 @@
 		font-weight: 300;
 		text-transform: uppercase;
 		padding: 3rem 4rem;
-		max-width: 245 px;
+		max-width: 245px;
 		transition: 0.2s linear;
 		z-index: 10;
 		@include display(phone) {
 			font-size: 2.4rem;
+			line-height: 2.4rem;
 			padding: 1rem 2rem;
 		}
 	}
@@ -34,9 +35,9 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
 		opacity: 0.6;
-		transition: 0.5s;
+		transition: 0.2s linear;
 		z-index: 5;
 	}
 	&:hover {

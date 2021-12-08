@@ -53,7 +53,7 @@ const creations = [
 		alt: "Pocket Borealis",
 	},
 	{
-		title: "The Curiosity",
+		title: "The Curiosity \r",
 		mobileImg: curiosityMobileImg,
 		desktopImg: curiosityDesktopImg,
 		alt: "The Curiosity",
