@@ -1,10 +1,10 @@
 import React from "react";
 
-function Card({ title, desktopImg, mobileImg }) {
+function Card({ id, title, desktopImg, mobileImg }) {
 	return (
 		<div className="card">
 			<picture>
-				<source media="(max-width: 999px)" srcset={mobileImg} />
+				<source media="(max-width: 999px)" srcSet={mobileImg} />
 				<img src={desktopImg} alt="" />
 			</picture>
 

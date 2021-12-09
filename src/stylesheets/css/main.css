@@ -78,9 +78,21 @@ p {
 a {
   color: #fff;
   text-decoration: none;
+  position: relative;
 }
-a:hover {
-  text-decoration: underline;
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.6px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.3s linear;
+  transform: scaleX(0);
+}
+a:hover::after {
+  transform: scaleX(0.8);
 }
 
 .navbar {
@@ -285,9 +297,6 @@ a:hover {
   align-items: center;
   gap: 1.6rem;
 }
-.footer__right ul a img:hover {
-  opacity: 0.5;
-}
 .footer__right .copyright {
   color: dimgray;
   font-size: 1.5rem;
@@ -379,7 +388,7 @@ a:hover {
   position: absolute;
   background-color: white;
   right: 0;
-  bottom: -5px;
+  bottom: 0;
   max-width: 54.5rem;
 }
 .loopstudios .intro__text-title {

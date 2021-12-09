@@ -49,13 +49,6 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			gap: 1.6rem;
-			a {
-				img {
-					&:hover {
-						opacity: 0.5;
-					}
-				}
-			}
 		}
 		.copyright {
 			color: $very-dark-gray;

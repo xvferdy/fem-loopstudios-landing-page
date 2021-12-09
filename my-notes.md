@@ -12,6 +12,8 @@
 ## Penting
 - [ ] sass url path (react probably fine)
 - [ ] intro img ganti versi desktop kalau masih tab (+ rubah max width text dibawahnya)
+- [ ] ss fem matikan animation position
+- [ ] firefox n chrome trest
 
 ## Readme
 - challenge my self max 3 days, but end up ~6days

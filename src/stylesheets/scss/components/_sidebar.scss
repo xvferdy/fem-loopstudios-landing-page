@@ -24,10 +24,12 @@
 		z-index: 30;
 		padding: 4rem 2rem;
 		background-color: black;
+		// transition: transform 0.3s ease-out;
 		&__list {
 			list-style: none;
 			position: absolute;
 			bottom: 50%;
+
 			&__item {
 				a {
 					display: block;
