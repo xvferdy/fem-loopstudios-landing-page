@@ -43,10 +43,10 @@
 		}
 
 		&--open {
-			transform: translatey(0);
+			transform: translateY(0);
 		}
 		&--closed {
-			transform: translatey(-100%);
+			transform: translateY(-100%);
 		}
 	}
 }

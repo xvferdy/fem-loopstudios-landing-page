@@ -230,10 +230,10 @@ a:hover {
     padding: 1rem 0;
   }
   .sidebar--open {
-    transform: translatey(0);
+    transform: translateY(0);
   }
   .sidebar--closed {
-    transform: translatey(-100%);
+    transform: translateY(-100%);
   }
 }
 
