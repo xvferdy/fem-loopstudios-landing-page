@@ -1,22 +1,39 @@
 @use "../helpers/" as *;
 
+/* SASS DIRECTORY
+	1. =.hero
+	2. =.intro
+	3. =.creations
+*/
+
 .loopstudios {
-	display: grid;
-	gap: 15.8rem;
 	%section-wrapper {
 		max-width: 111rem;
 		margin: 0 auto;
 	}
+	&-grid {
+		display: grid;
+		gap: 15.8rem;
+		padding-bottom: 15.8rem;
+	}
+
 	.hero {
-		padding: 6.5rem 4rem;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 			url("../../assets/images/desktop/image-hero.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
+		// height: 65rem;
+
+		background-attachment: fixed;
 		height: 65rem;
+
+		padding: 0 2.4rem;
 		&-wrapper {
 			@extend %section-wrapper;
+			@include display(phone) {
+				padding: 0 2rem;
+			}
 		}
 		&__title {
 			color: white;
@@ -24,22 +41,36 @@
 			padding-top: 12.6rem;
 			h1 {
 				font-family: $secondary-font;
-				font-size: 7.2rem;
-				font-weight: 300;
 				text-transform: uppercase;
-				border: 2px solid white;
-				max-width: 65rem;
-				padding: 4rem;
-				padding-bottom: 2.8rem;
-				line-height: 7rem;
+			}
+		}
+		@include display(phone) {
+			background-image: url("../../assets/images/mobile/image-hero.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 65rem;
+			padding: 0;
+			&__title {
+				padding-top: 23.6rem;
 			}
 		}
 	}
 	.intro {
+		padding: 0 2.4rem; // FIXME: 1px image container padding
 		&-wrapper {
 			@extend %section-wrapper;
 			display: flex;
 			position: relative;
+			flex-wrap: wrap;
+
+			@include display(tab-land) {
+				display: grid;
+				place-items: center;
+				text-align: center;
+			}
+		}
+		img {
+			width: 100%;
 		}
 		&__text {
 			padding-top: 9.6rem;
@@ -48,23 +79,25 @@
 			background-color: $white;
 			right: 0;
 			bottom: -5px;
-			width: 54.5rem;
-
+			max-width: 54.5rem;
 			&-title {
-				font-size: 4.8rem;
-				font-family: $secondary-font;
-				font-weight: 300;
 				text-transform: uppercase;
-				line-height: 4.8rem;
-				margin-bottom: 2.5rem;
 			}
 			&-desc {
 				color: $dark-gray;
 				line-height: 2.5rem;
 			}
+			@include display(tab-land) {
+				width: auto;
+				position: relative;
+				padding-top: 4.6rem;
+				padding-left: 0;
+				max-width: 731px;
+			}
 		}
 	}
 	.creations {
+		padding: 0 2.4rem;
 		margin: 2.5rem 0;
 		&-wrapper {
 			@extend %section-wrapper;
@@ -73,12 +106,9 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			align-content: center;
 			margin-bottom: 7.5rem;
-
 			&-title {
-				font-family: $secondary-font;
-				font-size: 4.8rem;
-				font-weight: 300;
 				text-transform: uppercase;
 			}
 			&-btn {
@@ -89,17 +119,40 @@
 				text-transform: uppercase;
 				letter-spacing: 0.5rem;
 				cursor: pointer;
+				&--mobile {
+					display: none;
+				}
 				&:hover {
 					background: black;
 					color: white;
 				}
+				@include display(phone) {
+					display: none;
+					&--mobile {
+						display: flex;
+						justify-content: center;
+						margin: 4rem auto 0 auto;
+					}
+				}
+			}
+			@include display(tab-port) {
+				margin-bottom: 3.5rem;
+			}
+			@include display(phone) {
+				justify-content: center;
 			}
 		}
 		&__cards {
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: space-between;
+			justify-content: center;
 			gap: 2.7rem;
+		}
+	}
+	@include display(tab-port) {
+		&-grid {
+			gap: 9.6rem;
+			padding-bottom: calc(15.8rem / 2);
 		}
 	}
 }

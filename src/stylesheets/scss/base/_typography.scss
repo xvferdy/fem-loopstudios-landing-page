@@ -1,5 +1,59 @@
 @use "../helpers/" as *;
 
+h1 {
+	font-size: 7.2rem;
+	line-height: 7rem;
+	font-weight: 300;
+
+	border: 2px solid white;
+	max-width: 65rem;
+	padding: 4rem;
+	padding-bottom: 2.8rem;
+
+	@include display(tab-land) {
+		font-size: 6.4rem;
+		line-height: 6.2rem;
+		max-width: 56rem;
+	}
+	@include display(phone) {
+		font-size: 4rem;
+		line-height: 3.8rem;
+		padding: 2rem;
+		max-width: 40rem;
+	}
+	@include display(sm-phone) {
+		font-size: 3.2rem;
+		line-height: 3rem;
+		padding: 1rem;
+		max-width: 30rem;
+	}
+}
+
+h2 {
+	font-family: $secondary-font;
+	font-size: 4.8rem;
+	font-weight: 300;
+	line-height: 4.8rem;
+	margin-bottom: 2.5rem;
+
+	@include display(tab-land) {
+		font-size: 4rem;
+		margin-bottom: 1.5rem;
+	}
+	@include display(phone) {
+		font-size: 3.2rem;
+		line-height: 3.2rem;
+		text-align: center;
+	}
+}
+
 p {
 	font-size: 1.5rem;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }

@@ -13,11 +13,14 @@
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
+		@include display(tab-port) {
+			flex-direction: column;
+		}
 	}
 	&__left {
 		@extend %gap;
 		.brand {
-			width: 14.4rem;
+			max-width: 14.4rem;
 		}
 		ul {
 			list-style: none;
@@ -25,8 +28,16 @@
 			gap: 3.2rem;
 			a {
 				font-size: 1.5rem;
-				color: $white;
-				text-decoration: none;
+			}
+		}
+		@include display(tab-port) {
+			a {
+				margin: 0 auto;
+			}
+			ul {
+				flex-direction: column;
+				align-items: center;
+				gap: 2.2rem;
 			}
 		}
 	}
@@ -38,10 +49,28 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			gap: 1.6rem;
+			a {
+				img {
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
 		}
 		.copyright {
 			color: $very-dark-gray;
 			font-size: 1.5rem;
+		}
+		@include display(tab-port) {
+			ul {
+				margin: 10px;
+				justify-content: center;
+			}
+			.copyright {
+				margin: 0 auto;
+				text-align: center;
+			}
+			margin-top: 4rem;
 		}
 	}
 }

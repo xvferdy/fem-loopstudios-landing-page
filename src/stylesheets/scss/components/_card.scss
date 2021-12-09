@@ -2,8 +2,12 @@
 
 .card {
 	position: relative;
+	overflow: hidden;
 	img {
+		width: 100%;
 		height: 100%;
+		object-fit: cover;
+		transition: 0.2s linear;
 	}
 	p {
 		font-family: $secondary-font;
@@ -11,10 +15,44 @@
 		color: white;
 		bottom: 0;
 		font-size: 3.2rem;
+		line-height: 3.2rem;
 		font-weight: 300;
 		text-transform: uppercase;
-		width: 70%;
 		padding: 3rem 4rem;
-		line-height: 3.2rem;
+		max-width: 245px;
+		transition: 0.2s linear;
+		z-index: 10;
+		@include display(phone) {
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+			padding: 1rem 2rem;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+		opacity: 0.6;
+		transition: 0.2s linear;
+		z-index: 5;
+	}
+	&:hover {
+		img {
+			transform: rotate(-3deg) scale(1.1);
+			@include display(tab-land) {
+				transform: rotate(0deg) scale(1.1);
+			}
+		}
+		&::before {
+			opacity: 1;
+		}
+		p {
+			transform: translateY(-5px);
+			text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+		}
 	}
 }
