@@ -19,13 +19,13 @@
 - [Author](#author)
 
 ## Brief
-This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!
+This challenge is perfect if you're looking to test your CSS Grid chops. Even without Grid, this project will be a fun one to help you practice your layout skills!
 
-Your challenge is to build out this **testimonials grid section** and get it looking as close to the design as possible. You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go. 
+Your challenge is to build out this **landing page** and get it looking as close to the design as possible. This challenge focuses mostly on HTML & CSS. There's a tiny bit of JS included for the mobile navigation toggle. But you could also choose to do this without JS! You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 **Preview** :eyeglasses:
 
-![Design preview for the Loopstudios landing page coding challenge](.src/assets/design/desktop-preview.jpg)
+![Design preview for the Loopstudios landing page coding challenge](./src/assets/design/desktop-preview.jpg)
 
 ### The challenge 
 Users should be able to:
@@ -66,5 +66,5 @@ Learn new HTML tag `<picture>` and it can contains one or more `<source>` elemen
 |:---:|
 
 <h3 align="right">
-      <a href="#testimonials-grid-section">To Top ⤴️</a>
+      <a href="#loopstudios-landing-page">To Top ⤴️</a>
 </h3>
