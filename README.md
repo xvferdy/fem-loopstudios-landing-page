@@ -32,7 +32,7 @@ Users should be able to:
   
 | Challenge | Newbie | Junior | Intermediate | Advanced |
 | --- | :---: | :---: | :---: | :---: |
-| View the optimal layout for the site depending on their device's screen size |  | ⭕ |  |  |
+| View the optimal layout for the site depending on their device's screen size | ⭕ |  |  |  |
 | See hover states for all interactive elements on the page |  | ⭕ |  |  |
 
 [![🐬 Junior Difficulty List](https://img.shields.io/badge/Difficulty-Junior-3F54A3?style=for-the-badge&logo=frontendmentor "Junior Difficulty")](https://www.frontendmentor.io/challenges?difficulties=2)
@@ -63,11 +63,12 @@ Learn new HTML tag `<picture>` and it can contains one or more `<source>` elemen
 ```
 
 ### Difficult Things 😵‍💫
+Things were difficult for me and I finally gave up
 - [ ] Layouting
 	- [ ] Hero image
 	- [ ] Transparent `nav`
 	- [ ] Wacky `flex`
-- [ ] Try to adding some animation
+- [ ] Try to add some animation
 - [ ] HTML accessibility
 - [ ] CSS code for `@media` all over the place
 
