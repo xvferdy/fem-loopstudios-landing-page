@@ -21,7 +21,7 @@
 ## Brief
 This challenge is perfect if you're looking to test your CSS Grid chops. Even without Grid, this project will be a fun one to help you practice your layout skills!
 
-Your challenge is to build out this **landing page** and get it looking as close to the design as possible. This challenge focuses mostly on HTML & CSS. There's a tiny bit of JS included for the mobile navigation toggle. But you could also choose to do this without JS! You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+Your challenge is to build out this **landing page** and get it looking as close to the design as possible. This challenge focuses mostly on HTML & CSS. There's a tiny bit of JS included for the mobile navigation toggle. But you could also choose to do this without JS! You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go 👍
 
 **Preview** :eyeglasses:
 
@@ -42,9 +42,14 @@ Users should be able to:
 - Live Site URL: submit later
 
 ## My process
-> ⏱️ I challenge my self to finish this ~3 days, but ended up in 6 days
+> ⏱️ I challenge my self to finish this for **~3 days** <br>
+> ▐ <br>
+> 🧑‍💻 Struggling <br>
+> ▐ <br>
+> 🗓️ Ended up in **6 days**
+
 ### Built with
-- React
+- [React](https://reactjs.org/ "React js")
 
 ### What I learned 🥳
 Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine what `<img>` will show on our current screen size
@@ -61,7 +66,9 @@ Learn new HTML tag `<picture>` and it can contains one or more `<source>` elemen
 - [ ] Layouting
 	- [ ] Hero image
 	- [ ] Transparent `nav`
+	- [ ] Wacky `flex`
 - [ ] Adding animation
+- [ ] HTML accessibility
 - [ ] CSS code for `@media` all over the place
 
 ## Author
