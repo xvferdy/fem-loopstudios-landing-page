@@ -50,7 +50,7 @@ Users should be able to:
 Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine the img tahat will show on our current screen size
 
 ###### src/components/Card.js
-```javacript
+```javascript
 <picture>
   <source media="(max-width: 999px)" srcSet={mobileImg} />
   <img src={desktopImg} alt="" />
