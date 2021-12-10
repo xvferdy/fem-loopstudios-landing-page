@@ -16,41 +16,51 @@ function Footer() {
 
 					<ul>
 						<li>
-							<a href="#">About</a>
+							<a className="link" href="#">
+								About
+							</a>
 						</li>
 						<li>
-							<a href="#">Careers</a>
+							<a className="link" href="#">
+								Careers
+							</a>
 						</li>
 						<li>
-							<a href="#">Events</a>
+							<a className="link" href="#">
+								Events
+							</a>
 						</li>
 						<li>
-							<a href="#">Products</a>
+							<a className="link" href="#">
+								Products
+							</a>
 						</li>
 						<li>
-							<a href="#">Support</a>
+							<a className="link" href="#">
+								Support
+							</a>
 						</li>
 					</ul>
 				</div>
 				<div className="footer__right">
 					<ul>
 						<li>
-							<a href="#">
+							<a className="link" href="#">
 								<img src={instagram} alt="Instgram" />
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a className="link" href="#">
 								<img src={pinterest} alt="Pinterest" />
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a className="link" href="#">
 								<img src={twitter} alt="Twitter" />
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a className="link" href="#">
 								<img src={facebook} alt="Facebook" />
 							</a>
 						</li>

@@ -56,12 +56,14 @@
 		}
 	}
 	.intro {
-		padding: 0 2.4rem; // FIXME: 1px image container padding
+		padding: 0 2.4rem; // FIXME: 1px image container paddingb
 		&-wrapper {
 			@extend %section-wrapper;
 			display: flex;
 			position: relative;
 			flex-wrap: wrap;
+
+			overflow-x: hidden;
 
 			@include display(tab-land) {
 				display: grid;
@@ -106,10 +108,13 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			align-content: center;
+
 			margin-bottom: 7.5rem;
+
 			&-title {
 				text-transform: uppercase;
+
+				margin-bottom: 0;
 			}
 			&-btn {
 				border: 1px solid black;

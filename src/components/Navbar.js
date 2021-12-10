@@ -11,19 +11,29 @@ function Navbar({ toggleSidebar }) {
 				</a>
 				<ul className="navbar__list">
 					<li className="navbar__list-item">
-						<a href="">About</a>
+						<a className="link" href="">
+							About
+						</a>
 					</li>
 					<li className="navbar__list-item">
-						<a href="">Careers</a>
+						<a className="link" href="">
+							Careers
+						</a>
 					</li>
 					<li className="navbar__list-item">
-						<a href="">Events</a>
+						<a className="link" href="">
+							Events
+						</a>
 					</li>
 					<li className="navbar__list-item">
-						<a href="">Products</a>
+						<a className="link" href="">
+							Products
+						</a>
 					</li>
 					<li className="navbar__list-item">
-						<a href="">Support</a>
+						<a className="link" href="">
+							Support
+						</a>
 					</li>
 				</ul>
 				<div className="navbar__button" onClick={toggleSidebar}>

@@ -23,12 +23,13 @@ function Sidebar({ isOpen, closeSidebar }) {
 	// li
 	const listVariant = {
 		hidden: {
-			x: "-100vw",
+			// x: "-100vw",
+
 			opacity: 0,
 		},
 		visible: {
-			x: isOpen ? 0 : "-100vw", // sama kyk hidden
-			opacity: 1,
+			// x: isOpen ? 0 : "-100vw", // sama kyk hidden
+			opacity: isOpen ? 1 : 0,
 			transition: {
 				type: "tween",
 			},

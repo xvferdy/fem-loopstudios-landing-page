@@ -8,12 +8,15 @@
 - [ ] cek2 lagi
 - [ ] branch animasi next
 - [ ] repo public
+- [ ] del log
 
 ## Penting
 - [ ] sass url path (react probably fine)
 - [ ] intro img ganti versi desktop kalau masih tab (+ rubah max width text dibawahnya)
 - [ ] ss fem matikan animation position
-- [ ] firefox n chrome trest
+- [ ] firefox n chrome trestr
+- [ ] footer
+
 
 ## Readme
 - challenge my self max 3 days, but end up ~6days
