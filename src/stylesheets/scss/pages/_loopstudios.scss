@@ -23,11 +23,8 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		// height: 65rem;
-
 		background-attachment: fixed;
 		height: 65rem;
-
 		padding: 0 2.4rem;
 		&-wrapper {
 			@extend %section-wrapper;
@@ -56,15 +53,13 @@
 		}
 	}
 	.intro {
-		padding: 0 2.4rem; // FIXME: 1px image container paddingb
+		padding: 0 2.4rem; // FIXME: 1px image container padding
 		&-wrapper {
 			@extend %section-wrapper;
 			display: flex;
 			position: relative;
 			flex-wrap: wrap;
-
 			overflow-x: hidden;
-
 			@include display(tab-land) {
 				display: grid;
 				place-items: center;
@@ -108,9 +103,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-
 			margin-bottom: 7.5rem;
-
 			&-title {
 				text-transform: uppercase;
 

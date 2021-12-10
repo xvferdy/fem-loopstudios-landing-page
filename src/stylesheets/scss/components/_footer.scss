@@ -20,11 +20,9 @@
 	&__left {
 		@extend %gap;
 		align-items: flex-start;
-
 		.brand {
 			max-width: 14.4rem;
 		}
-
 		ul {
 			list-style: none;
 			display: flex;
