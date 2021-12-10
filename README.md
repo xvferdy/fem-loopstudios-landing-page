@@ -52,7 +52,7 @@ Users should be able to:
 - [React](https://reactjs.org/ "React js")
 
 ### What I learned 🥳
-Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine what `<img>` will show on our current screen size
+Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine what `<img>` will shown on our current screen size
 
 ###### src/components/Card.js
 ```javascript
