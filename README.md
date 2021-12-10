@@ -42,7 +42,7 @@ Users should be able to:
 - Live Site URL: submit later
 
 ## My process
-> ⏱️ I challenge my self to finish this for **~3 days** <br>
+> ⌛ I challenge my self to finish this for **~3 days** <br>
 > ▐ <br>
 > 🧑‍💻 Struggling <br>
 > ▐ <br>
@@ -67,7 +67,7 @@ Learn new HTML tag `<picture>` and it can contains one or more `<source>` elemen
 	- [ ] Hero image
 	- [ ] Transparent `nav`
 	- [ ] Wacky `flex`
-- [ ] Adding animation
+- [ ] Try to adding some animation
 - [ ] HTML accessibility
 - [ ] CSS code for `@media` all over the place
 
