@@ -38,8 +38,8 @@ Users should be able to:
 [![🐬 Junior Difficulty List](https://img.shields.io/badge/Difficulty-Junior-3F54A3?style=for-the-badge&logo=frontendmentor "Junior Difficulty")](https://www.frontendmentor.io/challenges?difficulties=2)
 
 ### Links
-- Solution URL: submit later
-- Live Site URL: submit later
+- Solution URL: https://www.frontendmentor.io/solutions/femloopstudioslandingpage-qMxCsZkVQ
+- Live Site URL: https://loopstudios-landing-page-xvferdy.netlify.app/
 
 ## My process
 > ⌛ I challenge my self to finish this for **~3 days** <br>
