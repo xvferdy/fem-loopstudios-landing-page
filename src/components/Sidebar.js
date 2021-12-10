@@ -1,41 +1,81 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Sidebar({ isOpen, closeSidebar }) {
-	console.log(isOpen);
-	const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
+	// ul
+	const boxVariant = {
+		hidden: {
+			y: "-100vh",
+		},
+		visible: {
+			y: isOpen ? 0 : "-100vh",
+			transition: {
+				duration: 0.9,
+				when: "beforeChildren",
+				staggerChildren: 0.2,
+			},
+		},
+	};
+
+	// li
+	const listVariant = {
+		hidden: {
+			x: "-100vw",
+			opacity: 0,
+		},
+		visible: {
+			x: isOpen ? 0 : "-100vw",
+			opacity: isOpen ? 1 : 0,
+			transition: {
+				type: "tween",
+			},
+		},
+	};
 	return (
 		<>
-			{isOpen ? <div className="backdrop" onClick={closeSidebar}></div> : null}
-			<nav className={styles}>
-				<ul className="sidebar__list">
-					<li className="sidebar__list__item">
-						<a href="#" onClick={closeSidebar}>
+			{/* sidebar box */}
+			<motion.nav
+				className="sidebar"
+				initial={{ y: "-100vh" }}
+				animate={{ y: isOpen ? 0 : "-100vh" }}
+				transition={{
+					duration: 1,
+				}}
+			>
+				<motion.ul
+					className="sidebar__list"
+					variants={boxVariant}
+					initial="hidden"
+					animate="visible"
+				>
+					<motion.li className="sidebar__list__item" variants={listVariant}>
+						<a href="#top" onClick={closeSidebar}>
 							about
 						</a>
-					</li>
-					<li className="sidebar__list__item">
-						<a href="#" onClick={closeSidebar}>
+					</motion.li>
+					<motion.li className="sidebar__list__item" variants={listVariant}>
+						<a href="#top" onClick={closeSidebar}>
 							careers
 						</a>
-					</li>
+					</motion.li>
 
-					<li className="sidebar__list__item">
-						<a href="#" onClick={closeSidebar}>
+					<motion.li className="sidebar__list__item" variants={listVariant}>
+						<a href="#top" onClick={closeSidebar}>
 							event
 						</a>
-					</li>
-					<li className="sidebar__list__item">
-						<a href="#" onClick={closeSidebar}>
+					</motion.li>
+					<motion.li className="sidebar__list__item" variants={listVariant}>
+						<a href="#top" onClick={closeSidebar}>
 							product
 						</a>
-					</li>
-					<li className="sidebar__list__item">
-						<a href="#" onClick={closeSidebar}>
+					</motion.li>
+					<motion.li className="sidebar__list__item" variants={listVariant}>
+						<a href="#top" onClick={closeSidebar}>
 							support
 						</a>
-					</li>
-				</ul>
-			</nav>
+					</motion.li>
+				</motion.ul>
+			</motion.nav>
 		</>
 	);
 }

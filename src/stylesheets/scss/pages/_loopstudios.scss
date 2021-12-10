@@ -23,11 +23,8 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		// height: 65rem;
-
 		background-attachment: fixed;
 		height: 65rem;
-
 		padding: 0 2.4rem;
 		&-wrapper {
 			@extend %section-wrapper;
@@ -62,7 +59,7 @@
 			display: flex;
 			position: relative;
 			flex-wrap: wrap;
-
+			overflow-x: hidden;
 			@include display(tab-land) {
 				display: grid;
 				place-items: center;
@@ -78,7 +75,7 @@
 			position: absolute;
 			background-color: $white;
 			right: 0;
-			bottom: -5px;
+			bottom: 0;
 			max-width: 54.5rem;
 			&-title {
 				text-transform: uppercase;
@@ -106,10 +103,11 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			align-content: center;
 			margin-bottom: 7.5rem;
 			&-title {
 				text-transform: uppercase;
+
+				margin-bottom: 0;
 			}
 			&-btn {
 				border: 1px solid black;
