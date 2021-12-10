@@ -12,7 +12,7 @@
 
 ## Penting
 - [ ] sass url path (react probably fine)
-- [ ] intro img ganti versi desktop kalau masih tab (+ rubah max width text dibawahnya)
+- [ ] intro img ganti versi desktop kalau masih tab (+ rubah max width text dibawahnya)?
 - [ ] ss fem matikan animation position
 - [ ] firefox n chrome trestr
 - [ ] footer
