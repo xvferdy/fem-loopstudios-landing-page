@@ -15,7 +15,7 @@
 - [My process](#my-process)
 	- [Built with](#built-with)
 	- [What I learned](#what-i-learned-)
-	- [Continued development](#continued-development)
+	- [Difficult Things](#difficult-things-)
 - [Author](#author)
 
 ## Brief
@@ -57,9 +57,12 @@ Learn new HTML tag `<picture>` and it can contains one or more `<source>` elemen
 </picture>
 ```
 
-### Continued development
-- [ ] Mobile first
-- [x] Web title
+### Difficult Things 😵‍💫
+- [ ] Layouting
+	- [ ] Hero image
+	- [ ] Transparent `nav`
+- [ ] Adding animation
+- [ ] CSS code for `@media` all over the place
 
 ## Author
 | [<img src="https://avatars.githubusercontent.com/u/47988956?v=4" alt="xvferdy" width="100px"/><br><sub><samp>Berlianto</samp></sub>](https://github.com/xvferdy)  |
