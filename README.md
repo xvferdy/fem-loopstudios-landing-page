@@ -47,7 +47,7 @@ Users should be able to:
 - React
 
 ### What I learned 🥳
-Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine the img tahat will show on our current screen size
+Learn new HTML tag `<picture>` and it can contains one or more `<source>` elements. This tag can help us determine what `<img>` will show on our current screen size
 
 ###### src/components/Card.js
 ```javascript
